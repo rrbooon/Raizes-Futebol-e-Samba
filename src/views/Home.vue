@@ -1,18 +1,38 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Header :titulo="'Raízes Futebol e Samba'" :subtitulo="'Nasceu Raízes e tornou-se uma Alegria.....'"/>
+    
+    <PrincipiosInstitucionais />
+  
+    <SliderPatrocinadores />
+
+    <Maps />
+
+    <Contato />
+
+    
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import PrincipiosInstitucionais from '../components/PrincipiosInstitucionais.vue'
+import Header from '../components/Header.vue'
+import SliderPatrocinadores from '../components/SliderPatrocinadores.vue'
+import Maps from '../components/Maps.vue'
+import Contato from '../components/Contato.vue'
+
 
 export default {
   name: 'Home',
   components: {
-    HelloWorld
+    Header,
+    PrincipiosInstitucionais,
+    SliderPatrocinadores,
+    Maps,
+    Contato,
   }
 }
 </script>
+<style scoped>
+ 
+</style>

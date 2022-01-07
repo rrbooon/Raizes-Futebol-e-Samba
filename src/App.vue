@@ -1,30 +1,46 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+  <div id="app">
+    <div class="app">
+      <Navbar :logo="logo_src" :alt="app_name"/>
+      <div class="teste">
+        <router-view/>
+      </div>
+      <Rodape />
+    </div>
   </div>
-  <router-view/>
 </template>
+<script>
+import Navbar from './components/Navbar.vue'
+import Rodape from './components/Rodape.vue'
+
+export default {
+  components: { 
+    Navbar,
+    Rodape
+  },
+  name: "App",
+  data(){
+    return{
+      logo_src: "/img/logo_raizes.png",
+      app_name: "Raizes Futebol e Samba"
+
+    }
+  }
+}
+</script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: content-box;
 }
 
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
+.app{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-evenly; */
+  min-height: 100vh;
 }
 </style>
