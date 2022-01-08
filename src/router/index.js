@@ -21,6 +21,11 @@ const routes = [
     path: '/historia',
     name: 'Historia',
     component: () => import(/* webpackChunkName: "pedidos" */ '../views/Historia.vue')
+  },
+  {
+    path: '/hino',
+    name: 'Hino',
+    component: () => import(/* webpackChunkName: "pedidos" */ '../views/Hino.vue')
   }
 ]
 

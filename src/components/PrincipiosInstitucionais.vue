@@ -47,7 +47,7 @@ export default {
             missao:false,
             visao: false,
             valores: false,
-            titulo: 'Principios Institucionais',
+            titulo: 'Princípios Institucionais',
             corTituloFundo: 'rgb(167, 0, 0)',
             corTitulo: '#FFF'
 
